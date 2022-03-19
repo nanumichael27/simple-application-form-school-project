@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
     if (err) {
       console.log(err);
     } else {
-      res.render("dashboard.hbs", { formInfo });
+      res.render("dashboard", { formInfo });
     }
   });
 });

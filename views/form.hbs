@@ -1,131 +1,97 @@
-<html>
-  <head>
-    <title>Application Form</title>
-    <meta name="viewport" content="widthwidth,inital-scale=1" />
-    <link rel="stylesheet" href="./assets/style.css" />
-    <link
-      rel="stylesheet"
-      href="./assets/bootstrap-5.0.1/css/bootstrap.min.css"
+<form action="/" method="post">
+  <div class="form-container container">
+    <center>
+      <h1><b> SHAKA POLYTECHNIC </b></h1>
+      <h2><i> Education,Excellence and service </i></h2>
+    </center>
+    <hr />
+    <p>
+      <center>
+        <b> <i> Registration form </i> </b>
+      </center>
+    </p>
+    <hr />
+    <label for="Firstname"><b> Firstname</b> </label>
+    <input
+      type="text"
+      name="firstname"
+      placeholder="Enter firstname"
+      required
     />
-    <!-- <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    /> -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
-    <link rel="stylesheet" href="./assets/fontawesome-5.15.1/css/all.min.css" />
-  </head>
-  <body>
-    <form action="/" method="post">
-      <div class="container">
-        <center>
-          <h1><b> SHAKA POLYTECHNIC </b></h1>
-          <h2><i> Education,Excellence and service </i></h2>
-        </center>
-        <hr />
-        <p>
-          <center>
-            <b> <i> Registration form </i> </b>
-          </center>
-        </p>
-        <hr />
-        <label for="Firstname"><b> Firstname</b> </label>
-        <input
-          type="text"
-          name="firstname"
-          placeholder="Enter firstname"
-          required
-        />
-        <label for="Middlename"><b> Middlename</b> </label>
-        <input
-          type="text"
-          name="middlename"
-          placeholder="Enter middlename"
-          required
-        />
-        <label for="Lastname"><b> Lastname</b> </label>
-        <input
-          type="text"
-          name="lastname"
-          placeholder="Enter lastname"
-          required
-        />
-        <div>
-          <label for="Matriculation number"><b> Matriculation number</b>
-          </label>
-          <input
-            type="text"
-            name="matriculation-number"
-            placeholder="Enter Matriculation number"
-            required
-          />
-          <label> <b> Department: </b> </label>
-          <select required>
-            <option value="Department">select department</option>
-            <option value="Accounting">Accounting</option>
-            <option value="Business Administration">
-              Business Administration
-            </option>
-            <option value="Computer Engineering">Computer Engineering</option>
-            <option value="Electrical Engineering">
-              Electrical Engineering
-            </option>
-            <option value="Estate Management">Estate Management</option>
-            <option value="Mass Communication">Mass Communication</option>
-            <option value="Public Administration">Public Administration</option>
-            <option value="Science Laboratory Technology">
-              Science Laboratory Technology
-            </option>
-          </select>
-        </div>
-        <div>
-          <label>
-            <b> Program: </b>
-            <input type="radio" name="Program" value="OND" required />OND
-            <input type="radio" name="Program" value="HND" required />HND
-          </label>
-          <div>
-            <label> <b> Level: </b> </label>
-            <select required>
-              <option value="Level">Level</option>
-              <option value="1.1">1.1</option>
-              <option value="1.2">1.2</option>
-              <option value="2.1">2.1</option>
-              <option value="2.2">2.2</option>
-            </select>
-          </div>
-          <div>
-            <label> <b> Gender: </b> </label>
-            <input type="radio" name="Gender" value="Male" required />Male
-            <input type="radio" name="Gender" value="Female" required />Female
-          </div>
-          <div>
-            <label> <b> Current Address: </b> </label>
-            <textarea
-              cols="80"
-              rows="5"
-              placeholder="Enter Current Address"
-              required
-            ></textarea>
-          </div>
-          <label for="email"> <b> Email </b> </label>
-          <input type="text" placeholder="Enter email address" required />
-          <div style="text-align: center">
-            <input type="submit" name="submit" class="button" value="Submit" />
-          </div>
-          <p><b> EMAIL: support@shakapoly.edu.ng </b></p>
-          <p><b> WEBSITE: w.w.w.shakapoly.edu.ng </b></p>
-        </div>
+    <label for="Middlename"><b> Middlename</b> </label>
+    <input
+      type="text"
+      name="middlename"
+      placeholder="Enter middlename"
+      required
+    />
+    <label for="Lastname"><b> Lastname</b> </label>
+    <input type="text" name="lastname" placeholder="Enter lastname" required />
+    <div>
+      <label for="Matriculation number"><b> Matriculation number</b>
+      </label>
+      <input
+        type="text"
+        name="matriculation-number"
+        placeholder="Enter Matriculation number"
+        required
+      />
+      <label> <b> Department: </b> </label>
+      <select required>
+        <option value="Department">select department</option>
+        <option value="Accounting">Accounting</option>
+        <option value="Business Administration">
+          Business Administration
+        </option>
+        <option value="Computer Engineering">Computer Engineering</option>
+        <option value="Electrical Engineering">
+          Electrical Engineering
+        </option>
+        <option value="Estate Management">Estate Management</option>
+        <option value="Mass Communication">Mass Communication</option>
+        <option value="Public Administration">Public Administration</option>
+        <option value="Science Laboratory Technology">
+          Science Laboratory Technology
+        </option>
+      </select>
+    </div>
+    <div>
+      <label>
+        <b> Program: </b>
+        <input type="radio" name="Program" value="OND" required />OND
+        <input type="radio" name="Program" value="HND" required />HND
+      </label>
+      <div>
+        <label> <b> Level: </b> </label>
+        <select required>
+          <option value="Level">Level</option>
+          <option value="1.1">1.1</option>
+          <option value="1.2">1.2</option>
+          <option value="2.1">2.1</option>
+          <option value="2.2">2.2</option>
+        </select>
       </div>
-    </form>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
-    <script src="./assets/bootstrap-5.0.1/js/bootstrap.bundle.min.js"></script>
-  </body>
-</html>
+      <div>
+        <label> <b> Gender: </b> </label>
+        <input type="radio" name="Gender" value="Male" required />Male
+        <input type="radio" name="Gender" value="Female" required />Female
+      </div>
+      <div>
+        <label> <b> Current Address: </b> </label>
+        <textarea
+          cols="80"
+          rows="5"
+          placeholder="Enter Current Address"
+          required
+        ></textarea>
+      </div>
+      <label for="email"> <b> Email </b> </label>
+      <input type="text" placeholder="Enter email address" required />
+      <div style="text-align: center">
+        <input type="submit" name="submit" class="button" value="Submit" />
+      </div>
+      <p><b> EMAIL: support@shakapoly.edu.ng </b></p>
+      <p><b> WEBSITE: w.w.w.shakapoly.edu.ng </b></p>
+    </div>
+  </div>
+</form>
