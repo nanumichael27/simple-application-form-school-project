@@ -1,9 +1,11 @@
-<form action="/" method="post">
+
+{{> header title='SHAKA POLYTECHNIC' motto='Education,Excellence and service'}}
+
+<form action="/create" method="post" class="mt-5">
   <div class="form-container container">
-    <center>
-      <h1><b> SHAKA POLYTECHNIC </b></h1>
-      <h2><i> Education,Excellence and service </i></h2>
-    </center>
+    {{!-- <center>
+      <p>Education,Excellence and service </p>
+    </center> --}}
     <hr />
     <p>
       <center>
@@ -32,13 +34,13 @@
       </label>
       <input
         type="text"
-        name="matriculation-number"
+        name="matriculationNumber"
         placeholder="Enter Matriculation number"
         required
       />
       <label> <b> Department: </b> </label>
-      <select required>
-        <option value="Department">select department</option>
+      <select name="department" required>
+        <option>select department</option>
         <option value="Accounting">Accounting</option>
         <option value="Business Administration">
           Business Administration
@@ -58,13 +60,13 @@
     <div>
       <label>
         <b> Program: </b>
-        <input type="radio" name="Program" value="OND" required />OND
-        <input type="radio" name="Program" value="HND" required />HND
+        <input type="radio" name="program" value="OND" required />OND
+        <input type="radio" name="program" value="HND" required />HND
       </label>
       <div>
         <label> <b> Level: </b> </label>
-        <select required>
-          <option value="Level">Level</option>
+        <select name="level" required>
+          <option>Level</option>
           <option value="1.1">1.1</option>
           <option value="1.2">1.2</option>
           <option value="2.1">2.1</option>
@@ -73,12 +75,12 @@
       </div>
       <div>
         <label> <b> Gender: </b> </label>
-        <input type="radio" name="Gender" value="Male" required />Male
-        <input type="radio" name="Gender" value="Female" required />Female
+        <input type="radio" name="gender" value="male" required />Male
+        <input type="radio" name="gender" value="female" required />Female
       </div>
       <div>
         <label> <b> Current Address: </b> </label>
-        <textarea
+        <textarea name="address"
           cols="80"
           rows="5"
           placeholder="Enter Current Address"
@@ -86,12 +88,12 @@
         ></textarea>
       </div>
       <label for="email"> <b> Email </b> </label>
-      <input type="text" placeholder="Enter email address" required />
+      <input type="text" name="email" placeholder="Enter email address" required />
       <div style="text-align: center">
         <input type="submit" name="submit" class="button" value="Submit" />
       </div>
-      <p><b> EMAIL: support@shakapoly.edu.ng </b></p>
-      <p><b> WEBSITE: w.w.w.shakapoly.edu.ng </b></p>
+      <p>EMAIL:<a href="mailto:support@shakapoly.edu.ng">  support@shakapoly.edu.ng </a></p>
+      <p>WEBSITE:<a href="https://www.shakapoly.edu.ng" target="_blank" >  www.shakapoly.edu.ng </a></p>
     </div>
   </div>
 </form>

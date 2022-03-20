@@ -1,20 +1,33 @@
-<header class="p-3 bg-dark text-white">
+<main>
+  {{> header title='List of Entries' admin='dashboard-admin'}}
   <div class="container">
-    <div
-      class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between"
-    >
-      <a
-        href="/"
-        class="fa fa-landmark fa-2x d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
-      >
-      </a>
-
-      <div class="text-end">
-        <button type="button" class="btn btn-outline-light me-2">
-          Login
-        </button>
-        <button type="button" class="btn btn-warning">Sign-up</button>
-      </div>
+    <div class="table-responsive">
+    <table class="table table-bordered   table-striped" style="margin-top:100px">
+      <thead class="table__head">
+        <tr class="winner__table">
+          <th>S/N</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Level</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody>
+          {{#formInfo}}
+          <tr>
+            <td>{{id}}</td>
+            <td>{{firstname}} {{lastname}}</td>
+            <td>{{email}}</td>
+            <td>{{level}}</td>
+            <td class="text-center">
+              <a href="/show/{{id}}" class="btn btn-info text-dark">More Info <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> </a>
+            </td>
+          </tr>
+          {{else}}
+          <p>No entries to display</p>
+          {{/formInfo}}
+        </tbody>
+    </table>
     </div>
   </div>
-</header>
+</main>
