@@ -1,46 +1,45 @@
 
 {{> header title='SHAKA POLYTECHNIC' motto='Education,Excellence and service'}}
 
-<form action="/create" method="post" class="mt-5">
+<div class="container card my-5">
+  <form action="/create" method="post" class="mt-2">
   <div class="form-container container">
-    {{!-- <center>
-      <p>Education,Excellence and service </p>
-    </center> --}}
     <hr />
-    <p>
+    <h4>
       <center>
         <b> <i> Registration form </i> </b>
       </center>
-    </p>
+    </h4>
     <hr />
-    <label for="Firstname"><b> Firstname</b> </label>
-    <input
+    {{> messages }}
+    <label class="form-label" for="Firstname"><b> Firstname</b> </label>
+    <input class="form-control"
       type="text"
       name="firstname"
       placeholder="Enter firstname"
       required
     />
-    <label for="Middlename"><b> Middlename</b> </label>
-    <input
+    <label class="form-label" for="Middlename"><b> Middlename</b> </label>
+    <input class="form-control"
       type="text"
       name="middlename"
       placeholder="Enter middlename"
       required
     />
-    <label for="Lastname"><b> Lastname</b> </label>
-    <input type="text" name="lastname" placeholder="Enter lastname" required />
+    <label class="form-label" for="Lastname"><b> Lastname</b> </label>
+    <input class="form-control" type="text" name="lastname" placeholder="Enter lastname"  />
     <div>
-      <label for="Matriculation number"><b> Matriculation number</b>
+      <label class="form-label" for="Matriculation number"><b> Matriculation number</b>
       </label>
-      <input
+      <input class="form-control"
         type="text"
         name="matriculationNumber"
         placeholder="Enter Matriculation number"
         required
       />
-      <label> <b> Department: </b> </label>
+      <label class="form-label"> <b> Department: </b> </label>
       <select name="department" required>
-        <option>select department</option>
+        <option value="select">select department</option>
         <option value="Accounting">Accounting</option>
         <option value="Business Administration">
           Business Administration
@@ -58,15 +57,15 @@
       </select>
     </div>
     <div>
-      <label>
+      <label class="form-label">
         <b> Program: </b>
-        <input type="radio" name="program" value="OND" required />OND
-        <input type="radio" name="program" value="HND" required />HND
       </label>
+        <input type="radio" name="program" value="OND" required /> OND
+        <input type="radio" name="program" value="HND" required/> HND
       <div>
-        <label> <b> Level: </b> </label>
+        <label class="form-label"> <b> Level: </b> </label>
         <select name="level" required>
-          <option>Level</option>
+          <option value="select">Level</option>
           <option value="1.1">1.1</option>
           <option value="1.2">1.2</option>
           <option value="2.1">2.1</option>
@@ -74,26 +73,29 @@
         </select>
       </div>
       <div>
-        <label> <b> Gender: </b> </label>
-        <input type="radio" name="gender" value="male" required />Male
-        <input type="radio" name="gender" value="female" required />Female
+        <label class="form-label"> <b> Gender: </b> </label>
+        <input type="radio" name="gender" value="male"  required/> Male
+        <input type="radio" name="gender" value="female" required /> Female
       </div>
       <div>
-        <label> <b> Current Address: </b> </label>
+        <label class="form-label"> <b> Current Address: </b> </label> <br>
         <textarea name="address"
-          cols="80"
-          rows="5"
+          rows="3"
           placeholder="Enter Current Address"
+          class="form-control"
           required
         ></textarea>
       </div>
-      <label for="email"> <b> Email </b> </label>
-      <input type="text" name="email" placeholder="Enter email address" required />
-      <div style="text-align: center">
-        <input type="submit" name="submit" class="button" value="Submit" />
+      <div>
+        <label class="form-label mt-2" for="email"> <b> Email </b> </label>
+        <input class="form-control" type="text" name="email" placeholder="Enter email address"  required/>
       </div>
-      <p>EMAIL:<a href="mailto:support@shakapoly.edu.ng">  support@shakapoly.edu.ng </a></p>
-      <p>WEBSITE:<a href="https://www.shakapoly.edu.ng" target="_blank" >  www.shakapoly.edu.ng </a></p>
+      <div style="text-align: center">
+        <input class="mb-3 registerbtn" type="submit" name="submit" class="button" value="Submit" />
+      </div>
+      <i>EMAIL:<a href="mailto:support@shakapoly.edu.ng">  support@shakapoly.edu.ng </a></i> <br>
+      <i>WEBSITE:<a href="https://www.shakapoly.edu.ng" target="_blank" >  www.shakapoly.edu.ng </a></i>
     </div>
   </div>
 </form>
+</div>

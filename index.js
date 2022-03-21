@@ -9,7 +9,6 @@ const app = express();
 
 dotenv.config();
 
-
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/assets", express.static("assets"));
@@ -22,4 +21,4 @@ app.use('/', router)
 
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Serving at ${process.env.PORT || 5000}`);
-});
+})

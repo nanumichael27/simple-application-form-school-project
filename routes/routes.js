@@ -14,8 +14,31 @@ router.get("/success", (req, res) => {
 
 router.post("/create", (req, res) => {
   const data = req.body;
-  DB.query(
-    `INSERT INTO formdata(
+  let errors = []
+
+  if (data.program == null || data.gender === null ) {
+    errors.push({ msg: "Please fill in all fields" })
+  }
+  if (data.department || data.gender === 'select' ) {
+    errors.push({ msg: "Please fill in all fields" });
+  }
+  if (data.firstname === '' || 
+      data.middlename === '' ||
+      data.lastname === '' ||
+      data.matriculationNumber === '' ||
+      data.address === '' ||
+      data.email === '' 
+  ) {
+    errors.push({ msg: 'Please fill in all fields' });
+  }
+
+  if (errors.length > 0) {
+    res.render('form', {
+      errors,
+    });
+  } else {
+    DB.query(
+      `INSERT INTO formdata(
       firstname,
       middlename,
       lastname,
@@ -38,13 +61,14 @@ router.post("/create", (req, res) => {
         ${Prevention.escape(data.address)},
         ${Prevention.escape(data.email)}
     )`,
-    (err, result) => {
-      if (err) {
-        console.log(err);
+      (err, result) => {
+        if (err) {
+          console.log(err);
+        }
+        return res.redirect("success");
       }
-      return res.redirect("success");
-    }
     );
+  }
 });
 
 router.get("/dashboard-admin", (req, res) => {
