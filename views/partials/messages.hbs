@@ -1,10 +1,9 @@
 
-{{#if errors}}
+{{#errors}}
     <div class="alert alert-danger alert-dismissible fade show p-1 d-flex align-items-center justify-content-between" role="alert">
-            Please fill in all fields
-            {{!-- {{error.msg}} --}}
+            {{msg}}
             <span type="button" class="close" data-bs-dismiss="alert" aria-label="Close">
                 <i aria-hidden="true" class="fa fa-times"></i>
             </span>
         </div>
-{{/if}}
+{{/errors}}

@@ -17,10 +17,10 @@ router.post("/create", (req, res) => {
   let errors = []
 
   if (data.program == null || data.gender === null ) {
-    errors.push({ msg: "Please fill in all fields" })
+    errors.push({ msg: "Please fill in all check option fields" })
   }
   if (data.department || data.gender === 'select' ) {
-    errors.push({ msg: "Please fill in all fields" });
+    errors.push({ msg: "Please fill in all select option fields" });
   }
   if (data.firstname === '' || 
       data.middlename === '' ||
@@ -31,7 +31,6 @@ router.post("/create", (req, res) => {
   ) {
     errors.push({ msg: 'Please fill in all fields' });
   }
-
   if (errors.length > 0) {
     res.render('form', {
       errors,
