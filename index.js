@@ -18,7 +18,6 @@ app.set('view engine', 'hbs');
 
 app.use('/', router)
 
-
 app.listen(process.env.PORT || 5000, () => {
   console.log(`Serving at ${process.env.PORT || 5000}`);
 })

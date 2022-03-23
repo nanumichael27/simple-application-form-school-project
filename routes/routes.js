@@ -5,13 +5,17 @@ import DB from "../database/connection.js";
 
 const router = express.Router();
 
+// Load form page
 router.get("/", (req, res) => {
   res.render("form");
 });
+
+// Load success page
 router.get("/success", (req, res) => {
   res.render("success");
 });
 
+// Handling form Submit
 router.post("/create", (req, res) => {
   const data = req.body;
   let errors = []
@@ -70,6 +74,7 @@ router.post("/create", (req, res) => {
   }
 });
 
+// View all entries
 router.get("/dashboard-admin", (req, res) => {
   DB.query(`SELECT * FROM formdata`, (err, formInfo) => {
     if (err) {
@@ -80,6 +85,7 @@ router.get("/dashboard-admin", (req, res) => {
   });
 });
 
+// View specific entry
 router.get("/show/:id", (req, res) => {
   const id = req.params.id;
   DB.query(`SELECT * FROM formdata WHERE id = ${id} LIMIT 1`, (err, formInfo) => {

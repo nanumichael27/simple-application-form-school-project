@@ -2,16 +2,18 @@ body {
   font-family: New time Roman, Helvetica, sans-serif;
   padding: 0 !important;
 }
+a {
+  text-decoration: none !important;
+}
+
 .bg-dark { 
-  /* header */
+  /* for header */
   background: #d76a71;
   background: -moz-linear-gradient(-45deg, #d76a71 0%, #47b39a 100%);
   background: -webkit-linear-gradient(-45deg, #d76a71 0%, #47b39a 100%);
   background: linear-gradient(135deg, #d76a71 0%, #47b36f 100%);
 }
-a {
-  text-decoration: none !important;
-}
+
 .form-container {
   background: #98e184;
 }
@@ -44,6 +46,7 @@ hr {
   transform: scale(0.98);
   transition: .5s ease;
 }
+
 
 .thank-you-section.container {
   max-width: 900px;

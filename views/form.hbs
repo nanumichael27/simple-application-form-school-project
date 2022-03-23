@@ -11,32 +11,22 @@
       </center>
     </h4>
     <hr />
+
     {{> messages }}
+
     <label class="form-label" for="Firstname"><b> Firstname</b> </label>
-    <input class="form-control"
-      type="text"
-      name="firstname"
-      placeholder="Enter firstname"
-      required
-    />
+    <input class="form-control" type="text" name="firstname" placeholder="Enter firstname" required />
+
     <label class="form-label" for="Middlename"><b> Middlename</b> </label>
-    <input class="form-control"
-      type="text"
-      name="middlename"
-      placeholder="Enter middlename"
-      required
-    />
+    <input class="form-control" type="text" name="middlename" placeholder="Enter middlename" required />
+
     <label class="form-label" for="Lastname"><b> Lastname</b> </label>
     <input class="form-control" type="text" name="lastname" placeholder="Enter lastname"  />
+
     <div>
-      <label class="form-label" for="Matriculation number"><b> Matriculation number</b>
-      </label>
-      <input class="form-control"
-        type="text"
-        name="matriculationNumber"
-        placeholder="Enter Matriculation number"
-        required
-      />
+      <label class="form-label" for="Matriculation number"><b> Matriculation number</b> </label>
+      <input class="form-control" type="text" name="matriculationNumber" placeholder="Enter Matriculation number" required />
+
       <label class="form-label"> <b> Department: </b> </label>
       <select name="department" required>
         <option value="select">select department</option>
@@ -55,13 +45,14 @@
           Science Laboratory Technology
         </option>
       </select>
+
     </div>
+
     <div>
-      <label class="form-label">
-        <b> Program: </b>
-      </label>
-        <input type="radio" name="program" value="OND" required /> OND
-        <input type="radio" name="program" value="HND" required/> HND
+      <label class="form-label"><b> Program: </b> </label>
+      <input type="radio" name="program" value="OND" required /> OND
+      <input type="radio" name="program" value="HND" required/> HND
+
       <div>
         <label class="form-label"> <b> Level: </b> </label>
         <select name="level" required>
@@ -72,27 +63,27 @@
           <option value="2.2">2.2</option>
         </select>
       </div>
+
       <div>
         <label class="form-label"> <b> Gender: </b> </label>
         <input type="radio" name="gender" value="male"  required/> Male
         <input type="radio" name="gender" value="female" required /> Female
       </div>
+
       <div>
         <label class="form-label"> <b> Current Address: </b> </label> <br>
-        <textarea name="address"
-          rows="3"
-          placeholder="Enter Current Address"
-          class="form-control"
-          required
-        ></textarea>
+        <textarea name="address" rows="3" placeholder="Enter Current Address" class="form-control" required></textarea>
       </div>
+
       <div>
         <label class="form-label mt-2" for="email"> <b> Email </b> </label>
         <input class="form-control" type="text" name="email" placeholder="Enter email address"  required/>
       </div>
+
       <div style="text-align: center">
         <input class="mb-3 registerbtn" type="submit" name="submit" class="button" value="Submit" />
       </div>
+      
       <i>EMAIL:<a href="mailto:support@shakapoly.edu.ng">  support@shakapoly.edu.ng </a></i> <br>
       <i>WEBSITE:<a href="https://www.shakapoly.edu.ng" target="_blank" >  www.shakapoly.edu.ng </a></i>
     </div>
