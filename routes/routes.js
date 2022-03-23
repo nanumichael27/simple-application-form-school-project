@@ -20,10 +20,10 @@ router.post("/create", (req, res) => {
   const data = req.body;
   let errors = []
 
-  if (data.program == null || data.gender === null ) {
+  if (data.program == null || data.gender == null ) {
     errors.push({ msg: "Please fill in all check option fields" })
   }
-  if (data.department || data.gender === 'select' ) {
+  if (data.department === 'select' || data.gender === 'select' ) {
     errors.push({ msg: "Please fill in all select option fields" });
   }
   if (data.firstname === '' || 
